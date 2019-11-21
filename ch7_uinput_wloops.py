@@ -1,87 +1,82 @@
-## The input() function
-#message = input("Tell me something, and I will repeat it back to you: ")
-#print(message)
-#
-## Writing Clear Prompts
-#prompt = "If you tell us who you are, we can personalize the messages you see."
-#prompt += "\nWhat is you first name? "
-#
-#name = input(prompt)
-#print(f"\nHello, {name}!")
-#
-## Using int() to Accept Numerical Input
-#age = int(input("How old are you?: "))
-#if age >= 18:
-#  print("You are old enough to vote!")
-#else:
-#  print("You are not old enough to vote!")
-#
-## Odd or Even
-#number = input("Enter a number, and I'll tell you if it's even or odd: ")
-#number = int(number)
-#
-#if number % 2 == 0:
-#  print(f"\nThe number {number} is even.")
-#else:
-#  print(f"\nThe number {number} is odd.")
+# The input() function
+message = input("Tell me something, and I will repeat it back to you: ")
+print(message)
 
-## The While Loop in Action!
-#current_number = 1
-#while current_number <= 5:
-#  print(current_number)
-#  current_number += 1
-#
-## Letting the User Choose when to Quite
-#prompt = "\nTell me something, and I will repeat it back to you: "
-#prompt += "\nEnter 'quit' to end the program. "
-#message = ""
-#while message != 'quit':
-#  message = input(prompt)
-#  print(message)
-#  if message != 'quit':
-#    print(message)
+# Writing Clear Prompts
+prompt = "If you tell us who you are, we can personalize the messages you see."
+prompt += "\nWhat is you first name? "
 
-## Using a Flag
-#prompt = "\nTell me something, and I will repeat it back to you:"
-#prompt += "\nEnter 'quit' to end the program."
-#
-#active = True               # This is the flag
-#while active:
-#  message = input(prompt)
-#  if message == 'quit':
-#    active = False
-#  else:
-#    print(message)
+name = input(prompt)
+print(f"\nHello, {name}!")
 
-## Using break to Exit a Loop
-#prompt = "\nPlease enter the name of a city you have visited:"
-#prompt += "\n(Enter 'quit' when you are finished.)"
-#
-#while True:
-#  city = input(prompt)
-#  if city == 'quit':
-#    break
-#  else:
-#    print(f"I'd love to go to {city.title()}!")
+# Using int() to Accept Numerical Input
+age = int(input("How old are you?: "))
+if age >= 18:
+  print("You are old enough to vote!")
+else:
+  print("You are not old enough to vote!")
 
-## Using continue in a Loop - Print only odd numbers
-#current_number = 0
-#while current_number < 10:
-#  current_number += 1
-#  if current_number % 2 == 0:   #<---------
-#    continue  # goes back to beginning
-#  print(current_number)
-#
-## Using continue in a Loop - Print only Even Numbers
-#current_number = 0
-#while current_number < 10:
-#  current_number += 1
-#  if current_number % 2 != 0:   #<---------
-#    continue  # goes back to beginning
-#  print(current_number)
+# Odd or Even
+number = input("Enter a number, and I'll tell you if it's even or odd: ")
+number = int(number)
 
+if number % 2 == 0:
+  print(f"\nThe number {number} is even.")
+else:
+  print(f"\nThe number {number} is odd.")
+# The While Loop in Action!
+current_number = 1
+while current_number <= 5:
+  print(current_number)
+  current_number += 1
+
+# Letting the User Choose when to Quite
+prompt = "\nTell me something, and I will repeat it back to you: "
+prompt += "\nEnter 'quit' to end the program. "
+message = ""
+while message != 'quit':
+  message = input(prompt)
+  print(message)
+  if message != 'quit':
+    print(message)
+# Using a Flag
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt += "\nEnter 'quit' to end the program."
+
+active = True               # This is the flag
+while active:
+  message = input(prompt)
+  if message == 'quit':
+    active = False
+  else:
+    print(message)
+# Using break to Exit a Loop
+prompt = "\nPlease enter the name of a city you have visited:"
+prompt += "\n(Enter 'quit' when you are finished.)"
+
+while True:
+  city = input(prompt)
+  if city == 'quit':
+    break
+  else:
+    print(f"I'd love to go to {city.title()}!")
+# Using continue in a Loop - Print only odd numbers
+current_number = 0
+while current_number < 10:
+  current_number += 1
+  if current_number % 2 == 0:   #<---------
+    continue  # goes back to beginning
+  print(current_number)
+
+# Using continue in a Loop - Print only Even Numbers
+current_number = 0
+while current_number < 10:
+  current_number += 1
+  if current_number % 2 != 0:   #<---------
+    continue  # goes back to beginning
+  print(current_number)
+  
 # Using while loops with Lists and Dictionaries
-
 # Moving Items from One List to Another
 unconfirmed_users = ['alice', 'brian', 'candace']
 confirmed_users = []
