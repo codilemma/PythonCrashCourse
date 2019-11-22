@@ -3,15 +3,16 @@
 # Looping Through an Entire List
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
-  print(magician)
+    print(magician)
+    
 
 for magician in magicians:
-  print(f"{magician.title()}, that was a great trick!")
-  print(f"I can't wait to see your next trick, {magician.title()}.\n")
+    print(f"{magician.title()}, that was a great trick!")
+    print(f"I can't wait to see your next trick, {magician.title()}.\n")
 
 # Using the range() function
 for value in range(1, 5):
-  print(value)
+    print(value)
 
 # Use range() to make a list of numbers
 numbers = list(range(1, 6))
@@ -24,14 +25,14 @@ print(even_numbers)
 # another range() example
 squares = []
 for value in range(1, 11):
-  square = value ** 2
-  squares.append(square)
+    square = value ** 2
+    squares.append(square)
 print(squares)
 
 # or more concisely
 squares2 = []
 for value in range(1,11):
-  squares2.append(value**2)
+    squares2.append(value**2)
 print(squares2)
 
 # Min and Max of lists
@@ -55,7 +56,7 @@ print(players[-3:])  # outputs last three items in the list
 # Looping through a Slice
 print("Here are the first three players on my team:")
 for player in players[:3]:
-  print(player.title())
+    print(player.title())
 
 # Copying a List
 my_foods = ['pizza', 'falafel', 'carrot cake']
@@ -70,7 +71,7 @@ print(dimensions[1])
 # Looping through all values in a Tuple
 dimensions = (200, 50, 100)            # you must redifine a tuple to write over it
 for dimension in dimensions:
-  print(dimension)
+    print(dimension)
 
 
 
