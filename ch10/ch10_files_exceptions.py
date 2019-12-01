@@ -115,3 +115,89 @@ try:
 except FileNotFoundError:
     print(f"Sorry, the file {filename} does not exist.")
 
+# Using Split
+title = "Alice in Wonderland"
+print(title.split())
+
+# Analyzing Text
+
+def count_words(filename):   
+    """Count the approximate number of words in a text file""" 
+    try:
+        with open(filename, encoding='utf-8') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        # or you can write 'pass' to tell python to fail silently
+        print(f"Sorry, the file {filename} does not exist.")
+    else:
+        # Count the approximate number of words in the file.
+        words = contents.split() # splits words on the space
+        num_words = len(words)
+        print(f"The file {filename} has about {num_words} words.")
+
+
+filename = 'text_files/alice.txt'
+count_words(file_name)
+
+# Working with Multiple text files
+path = 'text_files/'
+files = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+filepaths = [path + f for f in files]
+print(filepaths)
+
+for filepath in filepaths:
+    print(filepath)
+    count_words(filepath)
+
+# Using the count() method to find out how many times
+# a word appears in a string.
+line = "Row, row, row your boat"
+print(line.count('row')) # Returns 2
+print(line.lower().count('row')) # Returns 3
+
+# Storing Data - JSON
+import json
+
+numbers = [2,3,4,7,11,13]
+
+filename = 'text_files/numbers.json'
+# store numbers in a json file
+with open(filename, 'w') as f:
+    json.dump(numbers, f)
+# read the json file to put numbers back into memory
+with open(filename) as f:
+    numbers2 = json.load(f)
+print(numbers2)
+
+# Saving and Reading User-Generated Data
+def get_stored_username():
+    """Get stored username if availabele."""
+    filename = 'text_files/username.json'
+    try:
+        with open(filename) as f:
+            username = json.load(f)
+    except FileNotFoundError:
+        print("There is no username stored")
+        return None
+    else:
+        return username
+
+def get_new_username():
+    """Prompt for a new username."""
+    username = input("What is your name?")
+    filename = 'username.json'
+    with open(filename, 'w') as f:
+        json.dump(username, f)
+    return username
+
+
+def greet_user():
+    """Greet the user by name."""
+    username = get_stored_username()
+    if username:
+        print(f"Welcome back, {username}!")
+    else:
+        username = get_new_username()
+        print(f"We'll remember you when you come back, {username}!")
+
+
